@@ -1,0 +1,633 @@
+@import 'bourbon/bourbon'
+@import 'normalize'
+@import 'youtube-player'
+//** Notes
+// This Project was created to test my HTML/CSS Knowledge, icons by Font awesome
+// Leave me a comment and leave some critics about syntax code etc thx in advance
+
+// Font Awesome Load
+@import '//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css'
+// Header Main Navigation Colors
+$Header-Top: #fcfcfc
+$Header-Bot: #c6c6c6
+// +++ Center Panel
+$Center-Panel-Top: #a7aab1
+$Center-Panel-Bot: #edf2f5
+// Sub Nav
+$Nav-Top: #f9f8f7
+$Nav-Bot: #f5f5f4
+// Footer
+$Footer-Top: #fcfcfc
+$Footer-Bot: #c6c6c6
+// Slieder
+$SliederBG-Top: #9e9e9e
+$SliederBG-Bot: #9e9e9e
+// Blue Active (shuffle, loop eg.)
+$ActiveBlue: #0099ec
+// Blue Active Playlist
+$ActivePlaylist: #8ba7c9
+// Grey
+$grey: #3d3d3d
+$grey2: #696969
+// Playlist TH
+$Border: #DADADA
+$TH-Bot: #EDEDED
+$TH-Top: #DFDFDF
+// PlayList nth-child
+$Playlist: #F1F4F7 // Light Blue
+$Playlist2: #FAFAFA // Grey/white
+body
+  background-image: url(http://barbmayer.com/images/backgrounds/Grey_Background.jpg)
+  //background-size: 50px
+  min-width: 845px !important // Default iTunes Window width (min)
+  min-height: 550px !important // Default iTunes Window height (min)
+  margin: 0px auto
+  //width: 1000px //Helper (Resize it as you like)
+  // JS Dynamic Resize to be Added
+.enterpage
+  width: 100%
+  height: 100%
+  position: absolute
+  left: 0
+  top: 0
+  z-index: 9
+  display: none
+  text-align: center
+  background-color: rgba(0,0,0,0.5)
+  .wrap
+    margin: 0 auto
+    margin-top: 100px
+    position: relative
+    .thx
+      box-shadow: 0px 0px 12px rgba(0,0,0,0.5)
+      display: inline-block
+      background-color: rgba(0,0,0,0.6)
+      border-radius: 25px
+      padding: 20px
+      ul
+        background: rgba(255,255,255,0.5)
+        border-radius: 25px
+        padding: 20px
+        li
+          color: black
+      h1
+        color: white
+        margin: 20px
+      h2
+        text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white
+      h3
+        color: red
+      p
+        color: red
+    .container
+      box-shadow: 0px 0px 12px rgba(0,0,0,0.5)
+      display: inline-block
+      background-color: rgba(0,0,0,0.6)
+      border-radius: 25px
+      padding: 20px
+      ul
+        background: rgba(255,255,255,0.5)
+        border-radius: 25px
+        padding: 20px
+        li
+          color: black
+      h1
+        color: white
+        margin: 20px
+      h2
+        text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white
+      h3
+        color: red
+      p
+        color: red
+    .feat
+      box-shadow: 0px 0px 12px rgba(0,0,0,0.5)
+      display: inline-block
+      position: relative
+      background-color: rgba(0,0,0,0.6)
+      border-radius: 25px
+      padding: 20px
+      ul
+        background: rgba(255,255,255,0.5)
+        border-radius: 25px
+        padding: 20px
+        li
+          color: black
+      h1
+        color: white
+        margin: 20px
+      h2
+        text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white
+      h3
+        color: red
+      p
+        color: red
+        
+.wrapper
+  box-shadow: 0px 0px 25px black
+  
+header
+  width: 100%
+  height: 60px
+  //+linear-gradient($Header-Top,$Header-Bot)
+  background-image: linear-gradient($Header-Top,$Header-Bot)
+  background-image: -webkit-linear-gradient($Header-Top,$Header-Bot)
+  background-image: -moz-linear-gradient($Header-Top,$Header-Bot)
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 2px rgba(255, 255, 255, 0.6)
+  border-bottom: 1px solid #7b7b7b
+  display: felx
+  .menu
+    background-image: url(/assets/img/LogoTrans.png)
+    background-size: cover
+    width: 60px
+    margin: 5px
+    height: 50px
+    display: inline-block
+    float: left
+    position: relative
+    cursor: pointer
+    .hover
+      text-align: center
+      color: white
+      position: absolute
+      left: 60px
+      top: 10px
+      border-radius: 3px
+      display: none
+      z-index: 1000
+      width: 100px
+      height: 40px
+      background-color: black
+    ul
+      background: #cccccc
+      display: none
+      list-style: none
+      position: absolute
+      border: 1px solid rgba(0,0,0,0.3)
+      width: 300px
+      z-index: 8
+      text-align: left
+      padding: 0
+      margin: 16px 7px
+      box-shadow: 3px 3px 8px rgba(0,0,0,0.5)
+      &.active
+        display: inline-block
+      li
+        margin: 5px 0px 5px 15px
+        font-size: 12px
+      hr
+        border-color: rgba(255,255,255,0.5)
+  .container
+    display: flex
+    position: relative
+    .left
+      position: relative
+      height: 57px
+      min-width: 180px
+      max-width: 235px
+      width: auto
+      margin-right: 15px
+      display: flex
+      .prev
+        height: 17px
+        width: 26px
+        min-width: 26px
+        background-image: url(http://i.imgur.com/8F3oX9w.png)
+        background-size: cover
+        margin: 20px 0px
+        margin-right: 19px
+        cursor: pointer
+      .play
+        +size(25px)
+        min-width: 25px
+        font-size: 25px
+        margin: 16px 0px
+        cursor: pointer
+        text-align: center
+        color: $grey2
+        display: none
+        &.active
+          display: block
+      .fa-play
+        color: rgba(0,0,0, 0.5)
+        text-shadow: 1px 2px 6px #def, 0 0 0 #3d3d3d
+        &:active
+          text-shadow: 1px 3px 14px #def, 0 0 0 #3d3d3d
+      .pause
+        +size(25px)
+        min-width: 25px
+        font-size: 25px
+        margin: 16px 0px
+        cursor: pointer
+        text-align: center
+        color: $grey2
+        display: none
+        &.active
+          display: block
+      .fa-pause
+        color: rgba(0,0,0, 0.5)
+        text-shadow: 1px 2px 6px #def, 0 0 0 #3d3d3d
+        &:active
+          text-shadow: 1px 3px 14px #def, 0 0 0 #3d3d3d
+      .next
+        cursor: pointer
+        height: 17px
+        width: 26px
+        min-width: 26px
+        background-image: url(http://i.imgur.com/0jEGux1.png)
+        background-size: cover
+        margin: 20px 0px
+        margin-left: 19px
+        margin-right: 15px
+      #volume
+        -webkit-appearance: none
+        -webkit-tap-highlight-color: rgba(255, 255, 255, 0)
+        width: 100px
+        height: 5px
+        margin: 25px 0px
+        border: none
+        padding: 1px 2px
+        border-radius: 14px
+        background: $SliederBG-Top
+        box-shadow: inset 0 1px 0 0 #ffffff, inset 0 -1px 0 0 #3a3d42
+        -webkit-box-shadow: inset 0 0px 4px 0 #3d3d3d, inset 0 -1px 0 0 $SliederBG-Top
+        outline: none
+      input[type='range']
+        -webkit-appearance: none
+        -webkit-tap-highlight-color: rgba(255, 255, 255, 0)
+        width: 100px
+        height: 5px
+        margin: 25px 0px
+        border: none
+        padding: 1px 2px
+        border-radius: 14px
+        background: $SliederBG-Top
+        box-shadow: inset 0 1px 0 0 #ffffff, inset 0 -1px 0 0 #3a3d42
+        -webkit-box-shadow: inset 0 0px 4px 0 #3d3d3d, inset 0 -1px 0 0 $SliederBG-Top
+        outline: none
+        &::-moz-range-track
+          border: inherit
+          background: transparent
+        &::-webkit-slider-thumb 
+          -webkit-appearance: none
+          box-shadow: 0 0px 4px 0 #0d0e0f, inset 0 -1px 0 0 #3a3d42
+          +size(15px)
+          border: none
+          border-radius: 50%
+          +linear-gradient( 45deg,$Header-Top,$Header-Bot,$Header-Top)
+      
+    .centerPanel
+      position: relative
+      left: 0%
+      border-radius: 4px
+      min-width: 335px
+      width: 42%
+      height: 53px
+      +radial-gradient(bottom ,#ffffff 1%,$Center-Panel-Top 99%)
+      display: flex
+      box-shadow: inset 0px 0px 9px 1px rgba(0, 0, 0, 0.5)
+      margin: 4px auto
+      border-bottom: 1px solid rgba(255,255,255,0.6)
+      border-top: 1px solid rgba(0,0,0,0.5)
+      .albumThumbnail
+        margin: 5px 10px 0px 12px
+        +size(45px)
+        min-width: 45px
+        background-image: url(http://www.themusicninja.com/wp-content/uploads/2012/11/artworks-000033775052-wpbwmt-t500x5001.jpg)
+        background-size: cover
+      .column
+        display: flex
+        flex-direction: column
+        width: 100%
+      .albumMenu
+        font-size: 30px
+        margin: 10px 15px 10px 20px
+        position: relative
+        right: 0
+        color: #3d3d3d
+        cursor: pointer
+      .controls
+        height: 20px
+        width: 100%
+        display: flex
+        margin: 0 auto
+        position: relative
+        .loop
+          height: 15px
+          width: 20px
+          margin-top: 3px
+          color: #3d3d3d
+          cursor: pointer
+          &:active
+            color: black
+        .tracking
+          height: auto
+          width: 90%
+          margin: 0px 10px
+          input[type='range']
+            -webkit-appearance: none
+            -webkit-tap-highlight-color: rgba(255, 255, 255, 0)
+            height: 5px
+            width: 100%
+            border: none
+            border-radius: 14px
+            background: $SliederBG-Top
+            box-shadow: inset 0 1px 0 0 #ffffff, inset 0 -1px 0 0 #3a3d42
+            -webkit-box-shadow: inset 0 0px 4px 0 #3d3d3d, inset 0 -1px 0 0 $SliederBG-Top
+            outline: none
+            &::-moz-range-track
+              border: inherit
+              background: transparent
+            &::-webkit-slider-thumb 
+              -webkit-appearance: none
+              box-shadow: 0 0px 4px 0 #0d0e0f, inset 0 -1px 0 0 #3a3d42
+              width: 5px
+              height: 15px
+              border: none
+              border-radius: 4px
+              +linear-gradient( 45deg,$Header-Top,$Header-Bot,$Header-Top)
+        .random
+          height: 15px
+          margin-top: 3px
+          width: 20px
+          color: #3d3d3d
+          cursor: pointer
+          &:active
+            color: black
+        .active
+          color: $ActiveBlue
+          text-shadow: 0px 0px 0.5px $ActiveBlue
+          &:focus
+            color: rgba(0,0,0,0.5)
+      .flexTitle
+        display: flex
+        flex-direction: column
+        margin: 0 auto
+        position: relative
+        .title
+          height: 15px
+          width: 100%
+          margin: 5px auto 0px auto
+          font-weight: 700
+          font-size: 13px
+          padding: 0px
+          text-shadow: 0px 0px 1px rgba(0,0,0,0.4)
+        .info
+          height: 10px
+          color: #3d3d3d
+          width: 100%
+          text-align: center
+          padding: 0px
+          font-size: 10px
+          text-shadow: 0px 0px 1px rgba(0,0,0,0.3)
+    .right
+      min-width: 225px
+      margin-left: 30px
+      width: auto
+      height: 57px
+      position: relative
+      right: 0
+      input[type=search]
+        position: absolute
+        right: 0
+        width: 150px
+        border: 1px solid grey
+        border-radius: 25px
+        font-size: 14px
+        margin: 20px 40px 15px 0px
+        padding: 2px 0px 0px 20px
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGJhc2VQcm9maWxlPSJmdWxsIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4bWxuczpldj0iaHR0cDovL3d3dy53My5vcmcvMjAwMS94bWwtZXZlbnRzIj4KPGc%2BCgk8cG9seWdvbiBmaWxsPSIjNjY2IiBwb2ludHM9IjkuMjA3LDYuMTI2IDcuNzkzLDcuNTQxIDExLjc5MywxMS41NDEgMTMuMjA3LDEwLjEyNiIgLz4KCTxwYXRoIGZpbGw9IiM2NjYiIGQ9Ik01LjkxNywyYzEuNjA4LDAsMi45MTcsMS4zMDgsMi45MTcsMi45MTdTNy41MjUsNy44MzMsNS45MTcsNy44MzNTMyw2LjUyNSwzLDQuOTE3UzQuMzA4LDIsNS45MTcsMgoJCSBNNS45MTcsMEMzLjIwMSwwLDEsMi4yMDEsMSw0LjkxN3MyLjIwMSw0LjkxNyw0LjkxNyw0LjkxN3M0LjkxNy0yLjIwMSw0LjkxNy00LjkxN0MxMC44MzMsMi4yMDEsOC42MzIsMCw1LjkxNywwTDUuOTE3LDB6IiAvPgo8L2c%2BCjwvc3ZnPgo%3D)
+        background-position: 5px 4px
+        float: right
+        &:focus
+          outline: none
+nav
+  height: 30px
+  display: flex
+  +linear-gradient(#eee,$Nav-Bot)
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.4)
+  z-index: 22
+  .select
+    width: 100px
+    border-radius: 5px
+    margin: 5px 5px
+    height: 20px
+    font-size: 12px
+    font-weight: 700
+    +linear-gradient(#fafafa,#eaeaea)
+    color: #3d3d3d
+    box-shadow: inset 0px 0px 2px rgba(0,0,0,0.3)
+    &:focus
+      outline: none
+  .center
+    text-align: center
+    margin: 0 auto
+    li
+      list-style: none
+      display: inline-block
+      height: 12px
+      margin: 4px 4px
+      padding: 3px 5px
+      box-sizing: border-box
+      border: 1px solid transparent
+      &.active
+        border: 1px solid rgba(0,0,0,0.2)
+        background: #e0dfde
+        border-radius: 15px
+        box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2)
+        box-sizing: border-box
+        height: 20px
+    a
+      margin: 0
+      display: block
+      padding: 0px 5px
+      font-size: 12px
+      color: #3d3d3d
+      font-weight: 700
+      text-decoration: none
+      text-align: center
+  .AppMenu
+    height: 23px
+    width: 40px
+    font-size: 15px
+    font-weight: 700
+    +linear-gradient(#fafafa,#eaeaea)
+    color: #3d3d3d
+    box-shadow: inset 0px 0px 2px rgba(0,0,0,0.3)
+    line-height: 1.6
+    border: 1px solid rgba(0,0,0,0.4)
+    text-align: center
+    border-radius: 4px
+    margin: 2px 0px 0px 15px
+  .Store
+    height: 23px
+    width: 90px
+    font-size: 12px
+    font-weight: 700
+    +linear-gradient(#fafafa,#eaeaea)
+    color: #3d3d3d
+    box-shadow: inset 0px 0px 2px rgba(0,0,0,0.3)
+    line-height: 2
+    border: 1px solid rgba(0,0,0,0.4)
+    text-align: center
+    border-radius: 4px
+    margin: 2px 4px 0px 3px
+section
+  .wrap
+    display: flex
+    flex-direction: row
+  .content
+    background: #f0f0f0
+    width: 100%
+  .wiedergabenliste
+    width: 199px
+    background: #f0f0f0
+    border-right: 1px solid #dbdbdb
+    border-bottom: 1px solid #dbdbdb
+    position: relative
+    .toolbar
+      border-top: 1px solid #dbdbdb
+      height: 35px
+      width: 100%
+      position: absolute
+      bottom: 0
+      display: inline-block
+      margin-top: 25px
+      .add
+        +size(20px)
+        display: inline-block
+        margin: 10px 5px 10px 10px
+        color: #3d3d3d
+        cursor: pointer
+      .edit
+        +size(20px)
+        display: inline-block
+        margin: 10px 5px
+        color: #3d3d3d
+        cursor: pointer
+    ul
+      margin-top: 5px
+      padding: 0px 0px 0px 0px
+      margin-bottom: 50px
+      li
+        margin: 4px 0px 4px 0px
+        width: 100%
+        font-weight: 600
+        cursor: pointer
+        border: 1px solid transparent
+        box-sizing: border-box
+        &.active
+          background: #c9cdd4
+          border: 1px solid rgba(0,0,0,0.1)
+        a
+          margin: 0
+          display: inline-block
+          padding: 0px 5px
+          font-size: 12px
+          color: #3d3d3d
+          font-weight: 700
+          text-decoration: none
+          text-align: center
+          font-family: "Arial"
+      .fa
+        color: $grey2
+        .fa-list-ul
+          color: $grey2
+        .fa-gear
+          color: $grey2
+    .head
+      background: #e9e9e9
+      display: inline-block
+      width: 100%
+      text-align: left
+      height: 22px
+      border-bottom: 1px solid #dbdbdb
+      h3
+        padding: 0px
+        margin: 2px 5px
+        font-weight: 100
+        font-size: 14px
+        color: rgba(0,0,0,0.5)
+.content
+  .playlistinfo
+    position: relative
+    width: 100%
+    height: 50px
+    border-bottom: 1px solid rgba(0,0,0,0.3)
+    display: flex
+    flex-direction: row
+    .left
+      display: flex
+      flex-direction: column
+      margin: 8px 15px
+      .top
+        display: flex
+        flex-direction: row
+        .playlistname
+          color: #3d3d3d
+          margin: 0px 10px 5px 0px
+        .play
+          margin-right: 10px
+          color: #3d3d3d
+          cursor: pointer
+        .random
+          color: #3d3d3d
+          cursor: pointer
+          
+      .bot
+        color: rgba(0,0,0,0.5)
+    .right
+      right: 0
+      position: absolute
+      margin: 8px 15px
+      .layout
+        display: inline-block
+      .add
+        display: inline-block
+  .table-wrap
+    position: relative
+    .table-scroll
+      height: 400px // Adjustment with th fixed + scroll
+      overflow: auto // Adjustment with th fixed + scroll
+      table
+        width: 100%
+        border-top: 1px solid rgba(0,0,0,0.5)
+        height: 400px
+        tr
+          background: $Playlist2
+          cursor: pointer
+          &:nth-child(2n+0)
+            background: $Playlist
+          &.active
+            color: white
+            background: #3d3d3d
+          &.head
+            +linear-gradient($TH-Top,$TH-Bot)
+          th
+            box-sizing: border-box
+            border: 1px solid rgba(0,0,0,0.1)
+            text-align: left
+            color: #626262
+            text-weight: 300
+            font-size: 12px
+            padding: 3px 0px 3px 5px
+          td
+            box-sizing: border-box
+            border-bottom: 1px solid rgba(0,0,0,0.1)
+footer
+  +linear-gradient($Footer-Top,$Footer-Bot)
+  height: 23px
+  border-top: 1px solid #7b7b7b
+  border-bottom: 1px solid #7b7b7b
+  text-align: center
+  small
+    display: inline-block
+    margin: 5px
+
+nav, footer, div
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+  -khtml-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
