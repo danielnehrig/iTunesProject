@@ -564,7 +564,6 @@ header .container .left input[type='range']::-webkit-slider-thumb {
   border: none;
   border-radius: 50%;
   background-color: #fcfcfc;
-  background-image: -moz-linear-gradient(-315deg, #fcfcfc, #c6c6c6, #fcfcfc);
   background-image: -webkit-linear-gradient(-315deg, #fcfcfc, #c6c6c6, #fcfcfc);
   background-image: linear-gradient(45deg,#fcfcfc, #c6c6c6, #fcfcfc);
 }
@@ -650,7 +649,6 @@ header .container .centerPanel .controls .tracking input[type='range']::-webkit-
   border: none;
   border-radius: 4px;
   background-color: #fcfcfc;
-  background-image: -moz-linear-gradient(-315deg, #fcfcfc, #c6c6c6, #fcfcfc);
   background-image: -webkit-linear-gradient(-315deg, #fcfcfc, #c6c6c6, #fcfcfc);
   background-image: linear-gradient(45deg,#fcfcfc, #c6c6c6, #fcfcfc);
 }
@@ -724,7 +722,6 @@ nav {
   height: 30px;
   display: flex;
   background-color: #eee;
-  background-image: -moz-linear-gradient(#eee, #f5f5f4);
   background-image: -webkit-linear-gradient(#eee, #f5f5f4);
   background-image: linear-gradient(#eee, #f5f5f4);
   box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.4);
@@ -738,7 +735,6 @@ nav .select {
   font-size: 12px;
   font-weight: 700;
   background-color: #fafafa;
-  background-image: -moz-linear-gradient(#fafafa, #eaeaea);
   background-image: -webkit-linear-gradient(#fafafa, #eaeaea);
   background-image: linear-gradient(#fafafa, #eaeaea);
   color: #3d3d3d;
@@ -784,7 +780,6 @@ nav .AppMenu {
   font-size: 15px;
   font-weight: 700;
   background-color: #fafafa;
-  background-image: -moz-linear-gradient(#fafafa, #eaeaea);
   background-image: -webkit-linear-gradient(#fafafa, #eaeaea);
   background-image: linear-gradient(#fafafa, #eaeaea);
   color: #3d3d3d;
@@ -801,7 +796,6 @@ nav .Store {
   font-size: 12px;
   font-weight: 700;
   background-color: #fafafa;
-  background-image: -moz-linear-gradient(#fafafa, #eaeaea);
   background-image: -webkit-linear-gradient(#fafafa, #eaeaea);
   background-image: linear-gradient(#fafafa, #eaeaea);
   color: #3d3d3d;
@@ -975,7 +969,6 @@ section .wiedergabenliste .head h3 {
 }
 .content .table-wrap .table-scroll table tr.head {
   background-color: #DFDFDF;
-  background-image: -moz-linear-gradient(#DFDFDF, #EDEDED);
   background-image: -webkit-linear-gradient(#DFDFDF, #EDEDED);
   background-image: linear-gradient(#DFDFDF, #EDEDED);
 }
@@ -995,7 +988,6 @@ section .wiedergabenliste .head h3 {
 
 footer {
   background-color: #fcfcfc;
-  background-image: -moz-linear-gradient(#fcfcfc, #c6c6c6);
   background-image: -webkit-linear-gradient(#fcfcfc, #c6c6c6);
   background-image: linear-gradient(#fcfcfc, #c6c6c6);
   height: 23px;
